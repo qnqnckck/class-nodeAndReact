@@ -1,0 +1,17 @@
+{
+  "name": "chapter2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "start:member": "nodemon src/member.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9",
+    "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
