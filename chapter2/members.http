@@ -1,0 +1,43 @@
+### members list
+GET http://localhost:3000/members
+
+
+### title
+GET http://localhost:3000/members/60ec4227ac6e9c1f1597235f
+
+
+### add a memeber
+POST http://localhost:3010/members
+Content-Type: application/json
+
+{
+    "name" : "정희원",
+    "country" : "JP"    
+}
+
+
+
+## add a member
+POST http://localhost:3000/members
+Content-Type: application/json
+
+{
+    "country" : "JP"    
+}
+### remove a memeber
+DELETE http://localhost:3000/members/2
+
+
+### update a memeber
+PUT http://localhost:3000/members/60ec4228ac6e9c1f15972363
+Content-Type: application/json
+
+{
+    "name" : "클라라",
+    "country" : "JP"
+}
+
+### error
+PUT http://localhost:3000/error
+
+

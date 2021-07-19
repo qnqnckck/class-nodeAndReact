@@ -44,12 +44,23 @@ app.post('/members/', (req, res) => {
   res.sendStatus(201) // created status code
 })
 
-app.put('/members/', (req, res) => {
-  res.end()
+app.put('/members/:id', (req, res) => {
+  const reqId = req.params.id
+  const { name, country } = req.body
+  const idx = Members.findIndex((v) => v.id === parseInt(reqId))
+
+  Members[idx] = { ...item, name, country }
+
+  res.sendStatus(200)
 })
 
-app.delete('/members/', (req, res) => {
-  res.end()
+app.delete('/members/:id', (req, res) => {
+  // 삭제할 인덱스를 찾는다.
+  const reqId = req.params.id
+
+  const idx = Members.findIndex((v) => v.id === parseInt(reqId))
+  Members.splice(idx, 1)
+  res.sendStatus(200)
 })
 
 app.listen(port, () => {

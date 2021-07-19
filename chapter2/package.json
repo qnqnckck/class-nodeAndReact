@@ -5,13 +5,19 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon src/index.js",
-    "start:member": "nodemon src/member.js"
+    "start:member": "nodemon src/member.js",
+    "start:member_mdb": "nodemon src/member_mdb.js",
+    "start:member_mgs": "nodemon src/member_mgs.js",
+    "mongo": "docker run --rm -it --net chapter2_default mongo mongo mongodb://mongo -u root -p example"
   },
   "devDependencies": {
     "nodemon": "^2.0.9",
     "prettier": "^2.3.2"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.9",
+    "mongoose": "^5.13.2"
   }
 }
